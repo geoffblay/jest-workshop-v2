@@ -31,6 +31,7 @@ export default Todo;
 const TodoContainer = styled.div`
     border: 1px solid #ccc;
     padding: 1rem;
+    padding-bottom: 2rem;
     margin-top: 2rem;
     width: 50%;
     display: flex;
