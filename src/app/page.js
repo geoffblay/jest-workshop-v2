@@ -4,7 +4,6 @@ import { useState } from "react";
 import { createGlobalStyle, styled } from "styled-components";
 import Title from "./components/Title";
 import CountButton from "./components/CountButton";
-import OpenModalButton from "./components/OpenModalButton";
 import Modal from "./components/Modal";
 import Todo from "./components/Todos";
 
@@ -26,8 +25,7 @@ export default function Home() {
         <Title name="world" />
         <CountButton />
         <Todo userId={1} />
-        <OpenModalButton onClick={openModal} />
-        <Modal isOpen={isModalOpen} onClose={closeModal} />
+        <Modal isOpen={isModalOpen} onClose={closeModal} openModal={openModal}/>
       </HomeContainer>
     </>
   );
@@ -45,5 +43,3 @@ const HomeContainer = styled.div`
   align-items: center;
   margin-top: 2rem;
 `
-
-
