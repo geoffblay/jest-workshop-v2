@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent, act } from '@testing-library/react';
 import OpenModalButton from '../components/OpenModalButton';
+import Home from '../page';
 import Modal from '../components/Modal';
 
 describe('Home', () => {
@@ -13,8 +14,8 @@ describe('Home', () => {
         fireEvent.click(button);
     });
 
-    const modalComponents = document.getElementsByClassName('modal');
-    expect(modalComponents.length).toBeGreaterThan(0);
+    const modalComponent = screen.queryByRole('dialog');
+    expect(modalComponent).toBeInTheDocument();
   });
 
 

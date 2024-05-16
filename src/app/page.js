@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { createGlobalStyle, styled } from "styled-components";
 import Title from "./components/Title";
 import CountButton from "./components/CountButton";
@@ -25,6 +26,8 @@ export default function Home() {
         <Title name="world" />
         <CountButton />
         <Todo userId={1} />
+        <OpenModalButton onClick={openModal} />
+        <Modal isOpen={isModalOpen} onClose={closeModal} />
       </HomeContainer>
     </>
   );
