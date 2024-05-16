@@ -6,7 +6,7 @@ const Modal = () => {
 
   return (
     <>
-      <ModalContainer isOpen={isOpen} data-testid="modal">
+      <ModalContainer isopen={isOpen.toString()} data-testid="modal">
         <ModalContent>
           <h1 data-testid="modal-content">This is the modal content</h1>
           <CloseModalButton onClick={() => setIsOpen(false)}>Close Modal</CloseModalButton>
@@ -20,7 +20,7 @@ const Modal = () => {
 export default Modal;
 
 const ModalContainer = styled.div`
-  display: ${props => (props.isOpen ? 'block' : 'none')};
+  display: ${props => (props.isopen === 'true' ? 'block' : 'none')};
   position: fixed;
   top: 0;
   left: 0;
