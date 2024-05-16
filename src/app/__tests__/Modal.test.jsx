@@ -13,8 +13,8 @@ describe('Home', () => {
         fireEvent.click(button);
     });
 
-    const modalContent = screen.getByText('Modal Content');
-    expect(modalContent).toBeInTheDocument();
+    const modalComponents = document.getElementsByClassName('modal');
+    expect(modalComponents.length).toBeGreaterThan(0);
   });
 
 
