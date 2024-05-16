@@ -20,3 +20,7 @@ test('displays todo data after fetch', async () => {
         expect(getByText('Completed: false')).toBeInTheDocument()
     })
 });
+
+test('toggles the completed status of the todo', async () => {
+    // TODO: Implement this test
+});

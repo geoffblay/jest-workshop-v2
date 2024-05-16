@@ -2,6 +2,7 @@ import '@testing-library/jest-dom'
 import { render, screen, fireEvent, act } from '@testing-library/react'
 import CountButton from '../components/CountButton'
 
+// You can also use describe to group tests together
 describe('CountButton', () => {
     it('renders a button with count 0', () => {
         render(<CountButton />)
