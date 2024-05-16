@@ -25,3 +25,6 @@ Tests can be run in this repo using:
 ```bash
 npm run test
 ```
+## Your Turn
+
+Implement the unfinished tests in `Todos.test.jsx` and `Modal.test.jsx`. Good luck!
