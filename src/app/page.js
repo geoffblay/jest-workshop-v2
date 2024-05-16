@@ -9,15 +9,6 @@ import Todo from "./components/Todos";
 
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
   return (
     <>
       <GlobalStyle />
@@ -25,7 +16,7 @@ export default function Home() {
         <Title name="world" />
         <CountButton />
         <Todo userId={1} />
-        <Modal isOpen={isModalOpen} onClose={closeModal} openModal={openModal}/>
+        <Modal />
       </HomeContainer>
     </>
   );

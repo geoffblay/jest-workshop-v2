@@ -6,23 +6,27 @@ import Modal from '../components/Modal';
 describe('Home', () => {
   it('opens the modal when button is clicked', () => {
     render(<Modal />);
-    const button = screen.getByRole('button')
-    expect(button).toHaveTextContent('Open Modal')
+    const openButton = screen.getByRole('button')
+    expect(openButton).toHaveTextContent('Open Modal')
 
-    expect(screen.getByTestId('modal')).toHaveAttribute('isOpen', 'false');
+    expect(screen.getByTestId('modal')).toHaveStyle('display: none');
 
-    // Click the button to open the modal
     act(() => {
-      fireEvent.click(button);
+      fireEvent.click(openButton);
     });
 
-    expect(screen.getByTestId('modal')).toHaveAttribute('isOpen', 'true');
-
-    // After clicking the button, check if isOpen prop is true
     const modal = screen.getByTestId('modal');
     expect(modal).toHaveStyle('display: block');
 
 
+    const closeButton = screen.getByRole('button')
+    expect(closeButton).toHaveTextContent('Close Modal')
+
+    act(() => {
+        fireEvent.click(closeButton);
+      });
+
+      expect(screen.getByTestId('modal')).toHaveStyle('display: none');
   });
 
 
