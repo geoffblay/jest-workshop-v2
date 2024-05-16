@@ -9,9 +9,9 @@ const CountButton = () => {
 
     return (
         <CountButtonContainer>
-            <button onClick={() => setCount((count) => count + 1)}>
+            <Button onClick={() => setCount((count) => count + 1)}>
                 count is {count}
-            </button>
+            </Button>
         </CountButtonContainer>
     )
 }
@@ -19,9 +19,14 @@ const CountButton = () => {
 export default CountButton
 
 const CountButtonContainer = styled.div`
-    margin-top: 20px;
-    button {
-        padding: 10px 20px;
-        font-size: 20px;
-    }
+`
+
+const Button = styled.button`
+    background-color: #0f1056;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
 `
