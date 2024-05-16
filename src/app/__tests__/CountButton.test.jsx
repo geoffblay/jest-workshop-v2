@@ -13,11 +13,15 @@ describe('CountButton', () => {
         render(<CountButton />);
         const button = screen.getByRole('button');
 
-        // Wrap the click event in act
-        act(() => {
+        /*
+        act ensures that the behavior in your tests matches what happens 
+        in the browser more closely by executing pending useEffects before returning
+        */
+        await act(async () => {
             fireEvent.click(button);
         });
 
+        // Check if the count is incremented
         expect(button).toHaveTextContent('count is 1');
     })
 })

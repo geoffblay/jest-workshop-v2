@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import Title from "./components/Title";
 import CountButton from "./components/CountButton";
 import OpenModalButton from "./components/OpenModalButton";
 import Modal from "./components/Modal";
@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <>
-      <h1>Demo</h1>
+      <Title name="world" />
       <CountButton />
       <Todo userId={1} />
       <div>
