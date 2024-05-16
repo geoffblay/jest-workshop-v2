@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { createGlobalStyle, styled } from "styled-components";
 import Title from "./components/Title";
 import CountButton from "./components/CountButton";
+import Modal from "./components/Modal";
 import Todo from "./components/Todos";
 
 
@@ -14,6 +16,7 @@ export default function Home() {
         <Title name="world" />
         <CountButton />
         <Todo userId={1} />
+        <Modal />
       </HomeContainer>
     </>
   );
@@ -31,5 +34,3 @@ const HomeContainer = styled.div`
   align-items: center;
   margin-top: 2rem;
 `
-
-
