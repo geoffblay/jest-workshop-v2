@@ -20,7 +20,8 @@ const Todo = ({ userId }) => {
     return (
         <TodoContainer>
             <h3>Title: {user.title}</h3>
-            <p>Completed: {user.completed.toString()}</p>
+            <h4>Completed: {user.completed.toString()}</h4>
+            <ToggleCompletedButton onClick={() => setUser({ ...user, completed: !user.completed })}>Toggle Complete</ToggleCompletedButton>
         </TodoContainer>
     );
 };
@@ -37,4 +38,14 @@ const TodoContainer = styled.div`
     align-items: center;
     color: white;
     border-radius: 1rem;
+`
+
+const ToggleCompletedButton = styled.button`
+    background-color: #0f1056;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
 `
