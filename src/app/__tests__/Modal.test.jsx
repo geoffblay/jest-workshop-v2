@@ -1,33 +1,15 @@
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent, act } from '@testing-library/react';
-import Home from '../page';
 import Modal from '../components/Modal';
 
-describe('Home', () => {
+describe('Modal', () => {
   it('opens the modal when button is clicked', () => {
-    render(<Modal />);
-    const openButton = screen.getByRole('button')
-    expect(openButton).toHaveTextContent('Open Modal')
+    // TODO: implement this test (Hint: toHaveStyle matcher may be useful here... )
 
-    expect(screen.getByTestId('modal')).toHaveStyle('display: none');
-
-    act(() => {
-      fireEvent.click(openButton);
-    });
-
-    const modal = screen.getByTestId('modal');
-    expect(modal).toHaveStyle('display: block');
-
-
-    const closeButton = screen.getByRole('button')
-    expect(closeButton).toHaveTextContent('Close Modal')
-
-    act(() => {
-        fireEvent.click(closeButton);
-      });
-
-      expect(screen.getByTestId('modal')).toHaveStyle('display: none');
   });
 
+  it('closes the modal when button is clicked', () => {
+    // TODO: implement this test
 
+  });
 });
